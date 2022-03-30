@@ -1,5 +1,6 @@
 #![allow(dead_code)]
 
+mod broker;
 mod error;
 mod pipeline;
 mod socket;
