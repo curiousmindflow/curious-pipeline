@@ -1,7 +1,8 @@
 #![allow(dead_code)]
 
-mod pipeline;
 mod error;
+mod pipeline;
+mod socket;
 
-pub use pipeline::{Pipeline, Pipe, PipelineBuilder};
 pub use error::Error;
+pub use pipeline::{Pipe, Pipeline, PipelineBuilder};

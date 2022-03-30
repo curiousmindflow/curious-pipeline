@@ -2,7 +2,7 @@ use std::sync::Arc;
 
 use curious_server::{Error, Pipe, PipelineBuilder};
 
-#[tokio::main]
+#[tokio::test(flavor = "current_thread")]
 pub async fn main() {
     let pipeline = PipelineBuilder::<Context>::init()
         .add_pipe(Box::new(ExamplePipe::new("Pipe_1".to_string())))
