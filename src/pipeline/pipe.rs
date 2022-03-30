@@ -1,6 +1,6 @@
 use crate::error::Error;
 
 pub trait Pipe<T> {
-    fn forward(&self, context: T) -> Result<T, Error>;
-    fn backward(&self, context: T) -> Result<T, Error>;
+    fn forward(&self, context: &mut T) -> Result<(), Error>;
+    fn backward(&self, context: &mut T) -> Result<(), Error>;
 }
